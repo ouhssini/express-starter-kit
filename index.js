@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv';
 import Routes from './src/routes/main.js';
 import connectDB from './src/config/connect.js';
+import morgan from 'morgan';
 
 // initialize express app
 const app = express();
@@ -11,6 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 dotenv.config();
 
+
+if (process.env.APP_ENV === 'development') {
+    app.use(morgan('dev'));
+  }
 // Connect to MongoDB
 connectDB();
 // define port number from environment variable or use default port 3000
