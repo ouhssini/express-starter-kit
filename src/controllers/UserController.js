@@ -1,5 +1,5 @@
 
-import Model from '../models/Model.js';
+import User from '../models/User.js';
 
 
 
@@ -13,7 +13,6 @@ import Model from '../models/Model.js';
  * @returns mixed
  */
 export const index = (req, res) => {
-    
 };
 
 

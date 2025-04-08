@@ -1,5 +1,5 @@
 import express from 'express';
-import modelsRouter from './model.js';
+import userRoutes from './user.js';
 
 
 
@@ -12,7 +12,7 @@ routers.get("/", (req, res) => {
 });
 
 //  use model routes
-routers.use('/models', modelsRouter);
+routers.use('/users', userRoutes);
 
 
 

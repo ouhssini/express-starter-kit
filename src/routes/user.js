@@ -1,5 +1,5 @@
 import express from 'express';
-import { index, show, destroy, store, update } from '../controllers/Controller.js';
+import { index, show, destroy, store, update } from '../controllers/UserController.js';
 
 
 
